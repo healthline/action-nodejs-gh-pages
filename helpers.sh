@@ -78,6 +78,9 @@ function ghPages {
   # navigate into build directory
   cd $BUILD_DIR
 
+  #create CNAME file
+  echo "${CNAME}" > CNAME
+  
   # initialize the repo, and be sure we identify as the triggering user
   git init && \
   git config user.name "${SCRIPT_USER}" && \
